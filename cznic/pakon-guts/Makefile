@@ -12,18 +12,18 @@ PKG_VERSION:=4.3
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://gitlab.labs.nic.cz/turris/pakon-guts.git
 PKG_SOURCE:=$(PKG_NAME).tar.gz
-PKG_SOURCE_VERSION:=ab4adc39e38dee59a13da8eba7591492e3f460d3
+PKG_SOURCE_VERSION:=f93a9178416d77d79e27cf57cddf43a158b2be0b
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_SOURCE_VERSION).tar.gz
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)
 PKG_MAINTAINER:=Michal Vaner <michal.vaner@nic.cz>
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
-PKG_RELEASE:=5
+PKG_RELEASE:=6
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/pakon-guts
 	TITLE:=pakon-guts
-	DEPENDS:=+liblua +libnetfilter-queue +iptables-mod-nfqueue +libstdcpp +libpthread +librt
+	DEPENDS:=+liblua +libnetfilter-queue +iptables-mod-nfqueue +libstdcpp +libpthread +librt +libndpi
 endef
 
 ifdef CONFIG_USE_MUSL
