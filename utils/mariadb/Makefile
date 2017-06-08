@@ -84,6 +84,8 @@ define Host/Configure
                         -DCMAKE_INSTALL_PREFIX=$(STAGING_DIR_HOST) \
                         -DCMAKE_PREFIX_PATH=$(STAGING_DIR_HOST) \
                         -DCMAKE_SKIP_RPATH=TRUE  \
+			-DCURSES_INCLUDE_PATH=$(STAGING_DIR_HOST)/usr/include \
+			-DCURSES_LIBRARY=$(STAGING_DIR_HOST)/usr/lib \
                         $(CMAKE_HOST_OPTIONS) \
 	..
 endef
