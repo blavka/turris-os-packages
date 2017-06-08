@@ -1,0 +1,12 @@
+--- a/ext/openssl/extconf.rb
++++ b/ext/openssl/extconf.rb
+@@ -97,9 +97,6 @@ have_func("OBJ_NAME_do_all_sorted")
+ have_func("SSL_SESSION_get_id")
+ have_func("SSL_SESSION_cmp")
+ have_func("OPENSSL_cleanse")
+-have_func("SSLv2_method")
+-have_func("SSLv2_server_method")
+-have_func("SSLv2_client_method")
+ have_func("SSLv3_method")
+ have_func("SSLv3_server_method")
+ have_func("SSLv3_client_method")
